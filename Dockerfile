@@ -8,7 +8,7 @@ ENV GOSBOT_PORT="513"
 ENV GOSBOT_UPDATE="true"
 
 # add files
-ADD ./start.sh /opt/gosbot/start.sh
+ADD ./start.sh /root/start.sh
 
 # install some dependencies and configure time
 RUN export DEBIAN_FRONTEND=noninteractive \
@@ -37,4 +37,4 @@ RUN wget --content-disposition https://gosbot.de/install -O /root/gosbot_install
 VOLUME ["/opt/gosbot"]
 
 # start command
-CMD ["/bin/bash"]
+CMD ["/root/start.sh"]
