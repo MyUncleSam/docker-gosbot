@@ -3,7 +3,7 @@ FROM ubuntu:focal
 # some environment variables
 ENV TZ="Europe/Berlin"
 ENV TERM="xterm-256color"
-ENV GOSBOT_KEY=""
+ENV GOSBOT_KEY="REPLACE WITH YOUR INSTALLATION KEY"
 ENV GOSBOT_PORT="513"
 ENV GOSBOT_UPDATE="true"
 

@@ -3,15 +3,15 @@ version: '3.1'
 services:
   gosebot:
     container_name: gosebot
-    hostname: gose.tsbots.de
+    hostname: gos.domain.tld
     image: gosbot:latest
     restart: always
     environment:
       - TZ="Europe/Berlin"
-      - GOSBOT_KEY="XXX"
-      - GOSBOT_PORT="513"
-      - GOSBOT_UPDATE="true"
+      - GOSBOT_KEY=abcdef12345678980
+      - GOSBOT_PORT=10513
+      - GOSBOT_UPDATE=1
     volumes:
       - ./gos:/opt/gosbot
     ports:
-      - 513:513
+      - 10513:10513
