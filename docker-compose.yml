@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  gosebot:
+    container_name: gosebot
+    hostname: gose.tsbots.de
+    image: ruepp/gosebot
+    restart: always
+    environment:
+      - TZ: "Europe/Berlin"
+      - GOSBOT_KEY: "0dd625a7236ec48e6999d2e30dd1189f972b6ef094d71d6175840ad381df1c11"
+      - GOSBOT_PORT: "513"
+      - GOSBOT_UPDATE: "true"
+    volumes:
+      - ./gose:/opt/gosbot
+    ports:
+      - 513:513
