@@ -12,6 +12,6 @@ services:
       - GOSBOT_PORT: "513"
       - GOSBOT_UPDATE: "true"
     volumes:
-      - ./gose:/opt/gosbot
+      - ./gos:/opt/gosbot
     ports:
       - 513:513
