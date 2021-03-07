@@ -13,3 +13,5 @@ services:
       - GOSBOT_UPDATE=1
     volumes:
       - ./gos:/opt/gosbot
+    ports:
+      - 10513:10513
