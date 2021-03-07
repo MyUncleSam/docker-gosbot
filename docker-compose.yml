@@ -4,7 +4,7 @@ services:
   gosebot:
     container_name: gosebot
     hostname: gose.tsbots.de
-    image: ruepp/gosebot
+    image: gosbot:latest
     restart: always
     environment:
       - TZ="Europe/Berlin"
