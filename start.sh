@@ -3,7 +3,7 @@ if [[ ! -d /opt/gosbot/instance/bot ]]; then
     echo "This is the first start of this container - starting installation procedure for key: ${GOSBOT_KEY}"
 
     # start installation using Ubuntu 18.04 (2) and the given port
-    echo -e "2\n${GOSBOT_PORT}\n" | /root/gosbot_installer.sh "a17ff793419d55df5195e5fc6a7d40b1c250f81e933302355e36016e1b05c005"
+    echo -e "2\n${GOSBOT_PORT}\n" | /root/gosbot_installer.sh "${GOSBOT_KEY}"
 fi
 
 echo "OS Date: $(date)"
