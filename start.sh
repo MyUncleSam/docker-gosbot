@@ -1,10 +1,12 @@
 #!/bin/bash
 if [[ ! -d /opt/gosbot/instance/bot ]]; then
     echo "This is the first start of this container - starting installation procedure for key: ${GOSBOT_KEY}"
-    sleep 5
 
     # start installation using Ubuntu 18.04 (2) and the given port
     echo -e "2\n${GOSBOT_PORT}\n" | /root/gosbot_installer.sh $GOSBOT_KEY
+
+    # stopping the bot as we start it in below
+    /usr/sbin/gosbot stop
 fi
 
 echo "OS Date: $(date)"
