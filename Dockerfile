@@ -29,11 +29,6 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsof
     && apt-get clean -y \
     && apt-get autoremove -y
 
-# download gosbot installer (and remove not needed sleeps to speedup build process)
-RUN wget --content-disposition https://gosbot.de/install -O /root/gosbot_installer.sh \
-    && chmod 777 /root/gosbot_installer.sh \
-    && sed -i "s/sleep/#sleep/g" /root/gosbot_installer.sh
-
 # volumes
 VOLUME ["/opt/gosbot"]
 
