@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ! -f /usr/sbin/gosbot ]; then
+if [ ! -f /opt/gosbot/instance/bot/TS3AudioBot.dll ]; then
     echo "This is the first start of this container - starting installation procedure for key: ${GOSBOT_KEY}"
 
     # start installation using Ubuntu 18.04 (2) and the given port
